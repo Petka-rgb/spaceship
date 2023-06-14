@@ -19880,6 +19880,7 @@ for _,v in pairs(doorbuttonmodels) do
 		local tween = game.TweenService:Create(v.Parent.Door.Weld, info2, {C0 = CFrame.Angles(0, 0, math.rad(-45)) * CFrame.new(-v.Parent.Door.Size.X / 2, 0, 0)})
 		tween:Play()
 		print("up")
+		print(CFrame.Angles(0, 0, math.rad(-45)) * CFrame.new(-v.Parent.Door.Size.X / 2, 0, 0))
 	end)
 	
 	v.Down.ClickDetector.MouseClick:Connect(function()
