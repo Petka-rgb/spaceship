@@ -19877,13 +19877,13 @@ for _,v in pairs(doorbuttonmodels) do
 	print(v.Down)
 	
 	v.Up.ClickDetector.MouseClick:Connect(function()
-		local tween = game.TweenService:Create(v.Parent.Door.Weld, info2, {C0 = CFrame.Angles(0, 0, math.rad(-45)) * CFrame.new(v.Parent.Door.Size.X / 2, 0, 0)})
+		local tween = game.TweenService:Create(v.Parent.Door.Weld, info2, {C0 = CFrame.Angles(0, 0, math.rad(-45)) * CFrame.new(-v.Parent.Door.Size.X / 2, 0, 0)})
 		tween:Play()
 		print("up")
 	end)
 	
 	v.Down.ClickDetector.MouseClick:Connect(function()
-		local tween = game.TweenService:Create(v.Parent.Door.Weld, info2, {C0 = CFrame.Angles(0, 0, math.rad(-0)) * CFrame.new(v.Parent.Door.Size.X / 2, 0, 0)})
+		local tween = game.TweenService:Create(v.Parent.Door.Weld, info2, {C0 = CFrame.Angles(0, 0, math.rad(-0)) * CFrame.new(-v.Parent.Door.Size.X / 2, 0, 0)})
 		tween:Play()
 		print("down")
 	end)
@@ -19925,7 +19925,7 @@ for _,v in pairs(ships) do
 		local weld = Instance.new("Weld", v.Door)
 		weld.Part0 = v.DoorHinge
 		weld.Part1 = v.Door
-		weld.C0 = CFrame.new(v.Door.Size.X / 2, 0, 0)
+		weld.C0 = CFrame.new(-v.Door.Size.X / 2, 0, 0)
 	end
 end
 
