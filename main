@@ -19923,8 +19923,8 @@ for _,v in pairs(ships) do
 		v.Door.Massless = true
 		
 		local weld = Instance.new("Weld", v.Door)
-		weld.Part0 = v.Door
-		weld.Part1 = v.DoorHinge
+		weld.Part0 = v.DoorHinge
+		weld.Part1 = v.Door
 		weld.C0 = CFrame.new(v.Door.Size.X / 2, 0, 0)
 	end
 end
