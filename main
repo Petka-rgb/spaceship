@@ -19864,7 +19864,7 @@ for i, v in pairs(ships) do
 	for _, e in pairs(v:GetDescendants()) do
 		if e.Name == "CargoDoorButtons" then
 			print(v:FindFirstChild("CargoDoorButtons"))
-			doorbuttonmodels[#doorbuttonmodels + 1] = v.CargoDoorButtons
+			doorbuttonmodels[#doorbuttonmodels + 1] = e
 		end
 	end
 end
