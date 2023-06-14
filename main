@@ -19860,14 +19860,13 @@ for i,v in pairs(ships) do
 	end
 	
 	if v:FindFirstChild("CargoDoorButtons") then
+		print(v:FindFirstChild("CargoDoorButtons"))
 		doorbuttonmodels[#doorbuttonmodels + 1] = v.CargoDoorButtons
 	end
 end
 
 local info2 = TweenInfo.new(2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut, 0, false, 0)
 for _,v in pairs(doorbuttonmodels) do
-	print(v)
-	
 	v.Up.ClickDetector.MouseClick:Connect(function()
 		local tween = game.TweenService:Create(v.Door.Weld, info2, {C0 = CFrame.Angles(math.rad(-45), 0, 0) * CFrame.new(v.Door.Size.X / 2, 0, 0)})
 		tween:Play()
