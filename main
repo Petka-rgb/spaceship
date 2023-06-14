@@ -19858,10 +19858,14 @@ for i,v in pairs(ships) do
 		currentbasket = baskets[i]
 		prev = v:GetExtentsSize().Magnitude
 	end
-	
-	if v:FindFirstChild("CargoDoorButtons") then
-		print(v:FindFirstChild("CargoDoorButtons"))
-		doorbuttonmodels[#doorbuttonmodels + 1] = v.CargoDoorButtons
+end
+
+for i, v in pairs(ships) do
+	for _, e in pairs(v:GetDescendants()) do
+		if e.Name == "CargoDoorButtons" then
+			print(v:FindFirstChild("CargoDoorButtons"))
+			doorbuttonmodels[#doorbuttonmodels + 1] = v.CargoDoorButtons
+		end
 	end
 end
 
@@ -19900,7 +19904,7 @@ for i, v in pairs(ships) do
 
 			e.Anchored = false
 			e.Massless = true
-			
+
 			if e.Name == "Seat" then
 				e:Destroy()
 			end
